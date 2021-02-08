@@ -61,7 +61,7 @@ function titleScreen() {
  * @type String
  */
 var volumeText = "VOLUME";
-var volumeTitle = "(change with up / down)";
+var volumeTitle = "(change with up / down / 'm' to mute the music)";
 var volumePause = "(change with left / right)";
 /**
  * Volume display render.

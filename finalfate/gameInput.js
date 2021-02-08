@@ -68,6 +68,24 @@ function getKeyPress(event) {
         } else if (event.keyCode === 80) {
             pause = 5;
         }
+
+          // 'm' key : mute the music  
+        else if(event.keyCode === 77){
+
+            if(musicAlreadyPlayed){
+                
+                // Mute
+                bgm.pause();
+                musicAlreadyPlayed = false;
+            
+            } else {
+                
+                // Unmute
+                bgm.play();
+                musicAlreadyPlayed = true;
+            
+            }
+          }
     }
 }
 
