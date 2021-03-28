@@ -37,9 +37,10 @@ function boss4_update() {
     else if (this.current_blinky_outside && this.current_blinky_outside.invalid) {
         this.current_blinky_outside = undefined;
         for (var i = 0; i < this.bombs_placed.length; i++) {
-        var bomb = this.bombs_placed.pop();
+        var bomb = this.bombs_placed[i];
         bomb.invalidate();
         }
+       this.bombs_placed = [];
     }
     //Boss phase 1: Check if bombs are destroyed.
     else if (this.current_blinky_outside) {
