@@ -60,6 +60,7 @@ function boss4_update() {
     //Boss phase 1: Spawn new batch if the old one is gone.
     else if (this.enemies_puffer_array.length>0 && !this.current_blinky_outside 
             && this.frameCounter % 10 === 0) {
+        ShipBuster.prototype.alreadyPlayed = false;
         var blinkyToRemove = this.enemies_puffer_array.pop();
         blinkyToRemove.invalid = true;
         var blinkyPosition = getCustomRandom(5, 0);
@@ -75,7 +76,7 @@ function boss4_update() {
 
             } else {
                 enemy_body_part = new ShipBuster(positions[j][0],
-                        positions[j][1]);
+                        positions[j][1],true);
                 this.bombs_placed.push(enemy_body_part);
 
             }
